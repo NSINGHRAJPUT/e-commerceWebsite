@@ -1,5 +1,6 @@
 .cart{
-    text-align: right;
+    position: fixed;
+    right: 3%;
 }
 
 .headings{

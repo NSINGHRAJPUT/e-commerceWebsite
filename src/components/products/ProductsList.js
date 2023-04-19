@@ -1,6 +1,20 @@
+import { Button } from 'react-bootstrap'
 import './ProductsList.css'
+import { useContext } from 'react'
+import CartContext from '../../store/cart-context'
 
 const ProductsList = (props) =>{
+   const cartCtx = useContext(CartContext)
+   const addToCart = (e)=>{
+    e.preventDefault();
+   let obj={
+    id:Math.random(),
+    title: `${props.title}`,
+    price: props.price,
+    imageUrl: `${props.url}`,
+    }
+    cartCtx.addItem(obj)
+   }
     return <div className="card-item">
         <h2>Album{props.id}</h2>
     <div >
@@ -10,7 +24,7 @@ const ProductsList = (props) =>{
         <img className="img" src={`${props.url}`} alt=""  ></img>
         <p className="text">${props.price}</p>
         </div>
-        <a href="xyz.com" className="btn btn-primary">Add to Cart</a>
+        <Button variant='primary' className="btn btn-primary" onClick={addToCart}>Add to Cart</Button>
       </div>    
     </div>
     </div>

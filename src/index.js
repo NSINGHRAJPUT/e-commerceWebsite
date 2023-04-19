@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Cart from './components/Cart/Cart'
 
-// import '../node_modules/react-bootstrap/dist/react-bootstrap.js'
+
+import '../node_modules/react-bootstrap/dist/react-bootstrap.js'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <Cart placement='end' name='Cart'/>
     <App />
   </React.StrictMode>
 );
