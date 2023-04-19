@@ -3,18 +3,7 @@ import { useState} from 'react';
 import CartContext from './cart-context';
 
 
-let  items= [{
-id:1,
-title: 'Colors',
-price: 100,
-imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%201.png',
-},
-{
-id:2,
-title: 'Black and white Colors',
-price: 50,
-imageUrl: 'https://prasadyash2411.github.io/ecom-website/img/Album%202.png',
-}]
+let  items= []
 
 
 const CartProvider = (props) => {
@@ -23,7 +12,7 @@ const CartProvider = (props) => {
     setCart((pre)=>[item,...pre])
   }
   const removeItemFromCartHandler = (id) =>{
-    setCart(cart.filter((itm)=>itm.id!==id))
+    setCart(cart.filter((item)=> item.id!== id))
   }
 
   const cartContext = {

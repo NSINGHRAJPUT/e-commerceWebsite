@@ -1,0 +1,18 @@
+.heading{
+    font-size: 100px;
+    text-align: center;
+    background-color: gray;
+}
+img{
+   width:200px;
+}
+#container{
+    width:100%;
+    background: yellow;
+}
+#floated{
+    float: left;
+    
+    width: 100px;
+   
+}
