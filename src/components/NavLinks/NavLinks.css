@@ -1,0 +1,18 @@
+.nav-links{
+    
+    text-align: center;
+    justify-content: space-around;
+    background: gray;
+}
+.btn-home{
+    background: #4c0384;
+    margin-right: 1%;
+    border-radius: 30px;
+    border-color: #4c0384;
+}
+.btn-about{
+    background: #03ac22;
+    margin-left: 1%;
+    border-radius: 30px;
+    border-color: #03ac22;
+}

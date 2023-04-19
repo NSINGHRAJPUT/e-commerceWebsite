@@ -1,8 +1,10 @@
 import About from "./components/About/About";
 import Cart from "./components/Cart/Cart";
+import NavLinks from "./components/NavLinks/NavLinks";
 import Products from "./components/products/Products";
 import CartProvider from './store/CartProvider'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
+
 
 const  router = createBrowserRouter([
   {path:'/about', element: <About/>},
@@ -12,8 +14,10 @@ const  router = createBrowserRouter([
 
 
 function App() {
+
   return (
     <CartProvider>
+    <NavLinks/>
     <RouterProvider router={router}/>
        
   
