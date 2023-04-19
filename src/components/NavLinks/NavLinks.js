@@ -1,10 +1,11 @@
 import './NavLinks.css'
+import { NavLink } from 'react-router-dom'
 
 const NavLinks = () =>{
 
     return <div className="nav-links">
-        <a href='/' className="btn-home" value='home'><h2>Home</h2></a>
-        <a href = '/about' className="btn-about" value='about'><h2>about</h2></a>
+        <NavLink to='/' className={({isActive})=>(isActive? 'a':'b')} end>Home</NavLink>
+        <NavLink to = '/about'   className={({isActive})=>(isActive? 'a':'b')} end>about</NavLink>
     </div>
 }
 
