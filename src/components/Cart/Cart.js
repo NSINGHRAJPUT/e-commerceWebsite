@@ -2,7 +2,9 @@ import { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './Cart.css'
-import CartContext from '../../store/cart-context';
+import CartContext from '../../Store/cart-context';
+
+
 
 function Cart({ name, ...props }) {
   const [show, setShow] = useState(false);
@@ -12,7 +14,7 @@ function Cart({ name, ...props }) {
     e.preventDefault();
     console.log(e.target.value)
     let id=e.target.value;
-    cartCtx.removeItem(id)
+   cartCtx.removeItem(id);
   }
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -24,7 +26,7 @@ function Cart({ name, ...props }) {
       </Button>
       <Offcanvas show={show} onHide={handleClose} {...props} >
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Cart{cartCtx.items.length}</Offcanvas.Title>
+          <Offcanvas.Title>Items</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
         <div className='headings'>
@@ -42,7 +44,7 @@ function Cart({ name, ...props }) {
             {cartCtx.items.map((item,i)=>{ return <div className='cart-items'>
             <div>
               <img src={`${item.imageUrl}`} alt='' width={60}/>
-                Album {i}
+                Album {item.key}
             </div>
             <div>
                 {item.price}

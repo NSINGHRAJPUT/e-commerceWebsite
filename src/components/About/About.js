@@ -2,15 +2,12 @@ import './About.css'
 
 const About = () =>{
     return <div >
-    <h1 className="heading">
-       Generics
-    </h1>
     <h1>
         About
     </h1>
     <div id='container'>
     <div id='floated'>
-    <img src='https://prasadyash2411.github.io/ecom-website/img/Band%20Members.png' alt=''></img></div>
+    <img src='https://prasadyash2411.github.io/ecom-website/img/Band%20Members.png' className='about-img' alt=''></img></div>
     <p > lorLorem ipsum carrots enhanced rebates. Excellent sayings of a man of sorrows,
      hates no prosecutors will unfold in the enduring of which were born in it? Often leads
       smallest mistake some pain main responsibilities are to stand for the right builder of pleasure,

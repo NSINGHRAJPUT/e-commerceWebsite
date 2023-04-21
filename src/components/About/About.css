@@ -3,8 +3,9 @@
     text-align: center;
     background-color: gray;
 }
-img{
-   width:200px;
+.about-img{
+   width:150px;
+   border-radius: 50%;
 }
 #container{
     width:100%;

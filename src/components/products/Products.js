@@ -1,5 +1,7 @@
-import ProductsList from "./ProductsList";
+import ProductList from "./ProductList";
 import './Products.css'
+import Cart from'../Cart/Cart'
+
 const productsArr = [
     {
         id:1,
@@ -55,11 +57,12 @@ const productsArr = [
        
         return (
           <div className="meals">
-            {productsArr.map((item) => (
-              <ProductsList
+            <Cart name="Cart" placement="end"/>
+            {productsArr.map((item,i) => (
+              <ProductList
                key={item.id}
                id={item.id}
-               title={item.title}
+               title={i+1}
                price={item.price}
                url={item.imageUrl}
               />
