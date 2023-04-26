@@ -9,6 +9,8 @@ import Cart from './components/Cart/Cart';
 import CartProvider from './Store/ContextProvider';
 import Error from './components/Header/Error';
 import Contactus from './components/Contact/Contactus';
+import User from './components/User/User';
+
 
 
 
@@ -21,7 +23,8 @@ const router = createBrowserRouter([
       {path:'/', element: <div><Home /><Cart/></div>},
       {path:'/about', element: <About/>},
       {path:'/store', element:<Products/>},
-      {path:'/contactus', element : <Contactus/>}
+      {path:'/contactus', element : <Contactus/>},
+      {path: '/user', element : <User />}
     ]
   }
   

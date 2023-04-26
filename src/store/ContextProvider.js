@@ -18,12 +18,23 @@ const productsArr = [
     }]
 
 const CartProvider = (props) =>{
+    const preToken = localStorage.getItem('token')
     const [arr,setArr] = useState(productsArr)
-
+    const [token,setToken] = useState(preToken)
+    const islogged = !!token
+    
+    const logOutHandler = () =>{
+        localStorage.removeItem('token');
+        setToken(null)
+    }
+    const loginHandler = (token) =>{
+        setToken(token);
+        localStorage.setItem('token', token)
+    }
+    
     const addHandler = (item) =>{
         setArr((pre)=>[item,...pre])
     }
-
     const removeHandler = (id) =>{
         setArr((pre)=>pre.filter((itm)=>itm.id!==id))
     }
@@ -33,7 +44,11 @@ const CartProvider = (props) =>{
         items:arr,
         totalAmount:0,
         addItem:addHandler,
-        removeItem:removeHandler
+        removeItem:removeHandler,
+        token:token,
+        islogged:islogged,
+        logIn:loginHandler,
+        logOut:logOutHandler
     }
     return (
         <CartContext.Provider value={cartContext}>

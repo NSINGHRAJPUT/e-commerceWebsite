@@ -2,9 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     background: #111111;
-    right: 5%;
-    box-shadow: 50px;
-    padding: 0% 30%;
+    padding: 0% 25%;
 }
 h2{
     color: white;
@@ -18,4 +16,6 @@ h2{
 }
 .a h2{
    color:blueviolet;
+   margin-left: 2%;
+   margin-right: 2%;
 }
