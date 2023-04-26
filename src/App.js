@@ -11,9 +11,6 @@ import Error from './components/Header/Error';
 import Contactus from './components/Contact/Contactus';
 import User from './components/User/User';
 
-
-
-
 const router = createBrowserRouter([
   {
     path:'/',
@@ -27,14 +24,12 @@ const router = createBrowserRouter([
       {path: '/user', element : <User />}
     ]
   }
-  
-])
+  ])
 
 function App() {
   return (
     <CartProvider>
      <RouterProvider router={router}></RouterProvider> 
-     
     </CartProvider>
   );
 }

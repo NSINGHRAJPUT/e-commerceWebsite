@@ -14,6 +14,7 @@ const Header = () =>{
     <div className="links">
     <NavLink to='/'className={({isActive})=>isActive? 'a' : 'b' } end><h2>Home</h2></NavLink>
     {authCtx.islogged && <NavLink to='/store' className={({isActive})=>isActive? 'a' : 'b' } end><h2>Store</h2></NavLink>}
+    {!authCtx.islogged && <NavLink to='/user' className={({isActive})=>isActive? 'a' : 'b' } end><h2>Store</h2></NavLink>}
     <NavLink to='/about' className={({isActive})=>isActive? 'a' : 'b' } end><h2>About</h2></NavLink>
     <NavLink to='/contactus' className={({isActive})=>isActive? 'a' : 'b' } end><h2>Contact</h2></NavLink>
     {!authCtx.islogged &&<NavLink to='/user'className={({isActive})=>isActive? 'a' : 'b' } end><h2>Login</h2></NavLink>}

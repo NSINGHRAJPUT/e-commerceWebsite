@@ -14,6 +14,7 @@ const ProductList = (props) =>{
     }
    console.log(obj)
    cartCtx.addItem(obj);
+   cartCtx.cart(obj);
    }
     return <div className="card-item">
         <h2>Album{props.id}</h2>

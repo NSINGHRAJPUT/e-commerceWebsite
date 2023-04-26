@@ -31,7 +31,7 @@ const User = () =>{
             if(res.ok){
                 res.json().then((data)=>{
                     console.log(data)
-                    authCtx.logIn(data.idToken)
+                    authCtx.logIn(data.idToken,data.email)
                     nev('/store');
                 })
             }else{

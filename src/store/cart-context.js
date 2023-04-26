@@ -8,7 +8,8 @@ const CartContext = React.createContext({
     token:'',
     islogged:false,
     logIn:(token)=>{},
-    logOut:()=>{}
-})
+    logOut:()=>{},
+    cart:(obj)=>{}
+    })
 
 export default CartContext;
