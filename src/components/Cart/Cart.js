@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './Cart.css'
-import CartContext from '../../Store/cart-context';
+import CartContext from '../../store/cart-context';
 
 
 

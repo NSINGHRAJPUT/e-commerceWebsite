@@ -1,5 +1,5 @@
 import { useContext, useRef,useState } from "react";
-import CartContext from "../../Store/cart-context";
+import CartContext from "../../store/cart-context";
 import { useNavigate } from "react-router-dom";
 
 const User = () =>{

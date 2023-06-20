@@ -1,7 +1,7 @@
 import { NavLink,Outlet, useNavigate } from "react-router-dom";
 import './Header.css'
 import { useContext } from "react";
-import CartContext from "../../Store/cart-context";
+import CartContext from "../../store/cart-context";
 
 const Header = () =>{
     const nav=useNavigate();
